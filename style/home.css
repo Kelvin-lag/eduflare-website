@@ -1,0 +1,515 @@
+/* Reset default margin and padding */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
+}
+
+
+/* General body styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: white;
+  min-height: 100vh;
+  color: #333333;
+}
+
+/* Container styling */
+.container {
+  max-width: 1200px;
+  margin: 10px auto 0 auto;
+}
+
+/* Hero section styling */
+.hero {
+  background: url('../image/study.jpg') no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 150px 20px;
+  height: 70vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 75px;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+  animation: fadeInDown 1s ease-out;
+  max-width: 600px;
+}
+
+.hero p {
+  font-size: 24px;
+  margin-bottom: 40px;
+  animation: fadeInUp 1s ease-out;
+  max-width: 600px;
+}
+
+.hero .btn {
+  background: #00308F;
+  color: #fff;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: background 0.3s ease;
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Featured property section styling */
+.featured-property {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.featured-property .container {
+  padding: 0 20px;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.featured-property p {
+  font-size: 15px;
+  color: #888;
+  margin-bottom: 40px;
+}
+
+.property-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.property-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 220px;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.property-card:hover {
+  transform: translateY(-10px);
+}
+
+.property-card .icon {
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.property-card img {
+  width: 60px;
+  height: 60px;
+}
+
+.property-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.property-card p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Awards section styling */
+.awards-section {
+  background-color: #112b47;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.awards-section h2 {
+  color: #00A54F;
+}
+
+.awards-section p {
+  font-size: 1.2em;
+  margin: 20px 0;
+}
+
+.awards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.award {
+  flex: 1;
+  max-width: 200px;
+  min-width: 150px;
+  margin: 20px;
+  background-color: #1b3b5f;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.award i {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.award h3 {
+  font-size: 2em;
+  margin: 10px 0;
+}
+
+.award p {
+  font-size: 0.9em;
+}
+
+/* Explore location section styling */
+.explore-location {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.explore-location p {
+  font-size: 18px;
+  color: #bfbfbf;
+  margin-bottom: 40px;
+}
+
+.location-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.location-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.location-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.location-card .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: left;
+  transition: background 0.3s;
+}
+
+.location-card:hover .overlay {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.location-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.location-card p {
+  font-size: 16px;
+}
+
+/* Featured agents section styling */
+.featured-agents {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.featured-agents p {
+  font-size: 18px;
+  color: #888;
+  margin-bottom: 40px;
+}
+
+.agent-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.agent-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.agent-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.listings {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #888;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.agent-photo {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin: 20px auto;
+  position: relative;
+}
+
+.agent-info {
+  padding: 10px;
+}
+
+.agent-info .location {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.agent-info h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  color: #888;
+  font-size: 20px;
+  margin: 0 5px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #00308faa;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.action-buttons .btn {
+  background-color: #00308faa;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.action-buttons .btn.call {
+  background-color: #000;
+}
+
+.action-buttons .btn:hover {
+  background-color: #218838;
+}
+
+.action-buttons .btn.call:hover {
+  background-color: #333;
+}
+
+
+/* Testimonial Section */
+.testimonial-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.testimonial-section h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #002060;
+}
+
+.testimonials {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.testimonial {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  max-width: 300px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testimonial-content {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.testimonial-info {
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-info img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin-right: 15px;
+}
+
+.testimonial-info h4 {
+  font-size: 18px;
+  color: #002060;
+  margin-bottom: 5px;
+}
+
+.testimonial-info span {
+  font-size: 14px;
+  color: #888;
+}
+
+
+
+
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 100px 10px;
+    margin-top: 60px;
+    height: auto;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+    max-width: 100%;
+  }
+
+  .hero p {
+    font-size: 18px;
+    max-width: 100%;
+  }
+
+  .hero .btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .property-cards {
+    justify-content: center;
+  }
+
+  .featured-property p,
+  .explore-location p {
+    font-size: 15px;
+  }
+
+  .property-card h3,
+  .location-card h3,
+  .explore-location h2,
+  .featured-property h2 {
+    font-size: 26px;
+  }
+
+  .testimonial-section h2 {
+    font-size: 28px;
+  }
+
+  .testimonial-text {
+    font-size: 14px;
+  }
+
+  .testimonials {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .container {
+    max-width: 100%;
+  }
+  .hero {
+    padding: 80px 5px;
+    margin-top: 60px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero .btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .property-card {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .testimonial-section h2 {
+    font-size: 24px;
+  }
+
+  .testimonial-text {
+    font-size: 14px;
+  }
+}
