@@ -1,17 +1,68 @@
 document.addEventListener('DOMContentLoaded', function() {
   const header = document.getElementById('header');
 
-  // Determine the base path
-  let basePath = window.location.pathname.includes('about.html') ? '../html/' : 'html/';
+  // Determine the base path for navbar.html
+  let basePath;
+  if (window.location.pathname.includes('about.html') || window.location.pathname.includes('job.html')) {
+    basePath = '../html/';
+  } else {
+    basePath = 'html/';
+  }
 
   fetch(basePath + 'navbar.html')
   .then(response => response.text())
   .then(data => {
     header.innerHTML = data;
+    fixNavLinks();
     setupNav();
   })
   .catch(error => console.error('Error loading navbar:', error));
 });
+
+function fixNavLinks() {
+  const isInHtmlFolder = window.location.pathname.includes('/html/');
+  const currentFile = window.location.pathname.split('/').pop();
+  const navLinks = document.querySelectorAll('.nav_links a');
+  navLinks.forEach(link => {
+    let href = link.getAttribute('href');
+
+    // If inside /html/
+    if (isInHtmlFolder) {
+      // If link is to index.html, prefix with ../
+      if (href.startsWith('index.html')) {
+        link.setAttribute('href', '../index.html');
+      }
+      // If link is to another html page in the same folder, use only the filename
+      else if (href === 'html/about.html' && currentFile !== 'about.html') {
+        link.setAttribute('href', 'about.html');
+      }
+      else if (href === 'html/job.html' && currentFile !== 'job.html') {
+        link.setAttribute('href', 'job.html');
+      }
+      // If already on the target page, prevent navigation
+      else if ((href === 'html/about.html' && currentFile === 'about.html') ||
+               (href === 'html/job.html' && currentFile === 'job.html')) {
+        link.setAttribute('href', '#');
+      }
+      // For hash links (e.g., index.html#agents), prefix with ../
+      else if (href.startsWith('index.html#')) {
+        link.setAttribute('href', '../' + href);
+      }
+      // For other html/ links, prefix with ../
+      else if (href.startsWith('html/') && !['html/about.html', 'html/job.html'].includes(href)) {
+        link.setAttribute('href', '../' + href.replace(/^html\//, ''));
+      }
+    } else {
+      // If at root, ensure links to html pages start with html/
+      if (href === 'about.html') {
+        link.setAttribute('href', 'html/about.html');
+      }
+      if (href === 'job.html') {
+        link.setAttribute('href', 'html/job.html');
+      }
+    }
+  });
+}
 
 function toggleMenu() {
   var x = document.getElementById("myTopnav");
@@ -63,3 +114,4 @@ function setupNav() {
     });
   });
 }
+

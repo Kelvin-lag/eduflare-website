@@ -11,7 +11,7 @@
 /* General body styles */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Source Sans Pro', 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: white;
@@ -416,8 +416,9 @@ h2 {
   color: #888;
 }
 
-
-
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', 'Source Sans Pro', sans-serif;
+}
 
 /* Media queries for responsive design */
 @media screen and (max-width: 768px) {
