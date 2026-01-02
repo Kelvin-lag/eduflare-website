@@ -15,6 +15,7 @@
     <main>
         <!-- Hero Section -->
         <section class="hero" id="home">
+            <img src="../images/job-hero.png" alt="EduFlare team" class="hero-bg" />
             <div class="hero-content">
                 <h1>Join Our Team at EduFlare</h1>
                 <p>Empowering education, transforming futures. Be part of our mission to make quality education accessible to all in Tanzania.</p>
@@ -29,43 +30,23 @@
                     <p>Explore exciting career opportunities at EduFlare and help us shape the future of education in Tanzania.</p>
                 </div>
                 <div class="jobs-grid">
-                    <!-- Social Media Coordinator Card -->
+                    <!-- Business Development & Digital Growth Officer (Graduate) -->
                     <div class="job-card">
-                        <div class="job-card-header">
+                        <div class="job-card-left">
                             <div class="job-icon">
-                                <i class="fas fa-hashtag"></i>
+                                <i class="fas fa-briefcase"></i>
                             </div>
                             <div class="job-title">
-                                <h3>Social Media Coordinator</h3>
+                                <h3>Business Development & Digital Growth Officer (Graduate)</h3>
                                 <div class="job-location">
                                     <i class="fas fa-map-marker-alt"></i>
-                                    <span>Dar es Salaam, Tanzania</span>
+                                    <span>Tanzania</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="job-card-body">
-                            <p class="job-description">We're looking for a creative Social Media Coordinator to manage our online presence and engage with our community of students, parents, and educators.</p>
-                            <button class="read-more-btn" data-job="social-media">Read More</button>
-                        </div>
-                    </div>
-
-                    <!-- Sales Manager Card -->
-                    <div class="job-card">
-                        <div class="job-card-header">
-                            <div class="job-icon">
-                                <i class="fas fa-handshake"></i>
-                            </div>
-                            <div class="job-title">
-                                <h3>Sales Manager</h3>
-                                <div class="job-location">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <span>Dar es Salaam, Tanzania</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="job-card-body">
-                            <p class="job-description">Join our sales team to drive growth and expand our educational services across Tanzania. Help us reach more schools and institutions.</p>
-                            <button class="read-more-btn" data-job="sales-manager">Read More</button>
+                        <div class="job-card-right">
+                            <p class="job-description">We are seeking a motivated graduate to support business development and digital growth activities across schools and student markets in Tanzania.</p>
+                            <button class="read-more-btn" data-job="business-digital-growth">Read More</button>
                         </div>
                     </div>
                 </div>
@@ -187,84 +168,33 @@
     </footer>
 
     <script>
-        // Job details data
+        // Job details data (single vacancy)
         const jobDetails = {
-            'social-media': {
-                title: 'Social Media Coordinator',
-                location: 'Dar es Salaam, Tanzania',
+            'business-digital-growth': {
+                title: 'Business Development & Digital Growth Officer (Graduate)',
+                location: 'Tanzania',
                 description: `
                     <section>
                         <h3 style="margin-bottom:0.5rem;color:#00308F;">About EduFlare</h3>
-                        <p>
-                            EduFlare helps students who want to study abroad by offering services including career guidance, university selection, visa support, scholarships, travel assistance, etc.
-                        </p>
-                        <h3 style="margin-bottom:0.5rem;color:#00308F;">Role Overview</h3>
-                        <p>
-                            We are looking for a creative, organized Social Media Coordinator to manage EduFlare’s social media channels (especially Instagram, Facebook, maybe TikTok or LinkedIn). You’ll ensure regular posting, create engaging content, and help grow our audience and engagement.
-                        </p>
+                        <p>EduFlare supports students seeking international education by offering guidance on university selection, visa support, scholarships, travel assistance, and related services.</p>
+                        <h3 style="margin-top:1rem;margin-bottom:0.5rem;color:#00308F;">Role Overview</h3>
+                        <p>This graduate role supports business development and digital growth across schools and student markets in Tanzania, working closely with sales and marketing teams.</p>
                     </section>
                 `,
                 responsibilities: [
-                    'Develop and implement social media strategies to increase brand awareness and engagement',
-                    'Create, curate, and manage published content across all social media platforms',
-                    'Monitor, listen, and respond to users in a timely and appropriate manner',
-                    'Conduct online research to identify emerging trends and best practices',
-                    'Collaborate with marketing and education teams to develop content calendars',
-                    'Analyze and report on social media performance metrics',
-                    'Manage social media advertising campaigns'
+                    'Identify and support expansion into new schools, regions, and student markets',
+                    'Build and manage partnerships with schools, institutions, and education stakeholders',
+                    'Support social media growth and student engagement (WhatsApp, Instagram, Facebook, TikTok)',
+                    'Generate student leads through digital campaigns, school visits, and events',
+                    'Support the sales team with leads, programs, and outreach activities',
+                    'Track activities and prepare simple weekly and monthly reports'
                 ],
                 requirements: [
-                    'Bachelor\'s degree in Marketing, Communications, or related field',
-                    'Have experience in social media management',
-                    'Excellent written and verbal communication skills',
-                    'Proficiency in social media management tools and analytics',
-                    'Creative thinking and problem-solving abilities',
-                    'Knowledge of the education sector in Tanzania is a plus'
-                ],
-                offer: [
-                    'Opportunity to play a key role in growing an education support organisation',
-                    'Flexible working environment',
-                    'Room for creativity and implementing your ideas',
-                    'Competitive salary'
-                ]
-            },
-            'sales-manager': {
-                title: 'Sales Manager',
-                location: 'Dar es Salaam, Tanzania (or remote with local travel)',
-                description: `
-                    <section>
-                        <h3 style="margin-bottom:0.5rem;color:#00308F;">About EduFlare</h3>
-                        <p>
-                            EduFlare supports students through the process of studying abroad career guidance, selecting universities, visa support, scholarships, etc.
-                        </p>
-                        <h3 style="margin-bottom:0.5rem;color:#00308F;">Role Overview</h3>
-                        <p>
-                            The Sales Manager will lead efforts to acquire new clients (students & parents), expand into new markets (regions, schools, channels), and ensure that EduFlare meets its enrollment targets. You will manage outreach, build partnerships, and design sales strategies that suit our growth ambitions.
-                        </p>
-                    </section>
-                `,
-                responsibilities: [
-                    'Develop and execute sales strategies to achieve company goals',
-                    'Lead, mentor, and motivate the sales team',
-                    'Identify and pursue new business opportunities in the education sector',
-                    'Build and maintain strong relationships with key clients and partners',
-                    'Monitor sales performance and prepare regular reports',
-                    'Collaborate with marketing and product teams to develop effective sales materials',
-                    'Represent EduFlare at industry events and conferences'
-                ],
-                requirements: [
-                    'Bachelor\'s degree in Business, Marketing, or related field',
-                    'Have sales experience, with at least 1-2 years in a leadership role',
-                    'Proven track record of meeting and exceeding sales targets',
-                    'Excellent communication, negotiation, and presentation skills',
-                    'Strong understanding of the education market in Tanzania',
-                    'Ability to travel as needed'
-                ],
-                offer: [
-                    'Competitive compensation plus performance incentives / commissions',
-                    'Great growth opportunity as we expand our services and reach',
-                    'A chance to make a real impact helping students fulfil their dreams of studying abroad',
-                    'Supportive team environment'
+                    'Fresh graduate in Business, Marketing, Education, or related field',
+                    'Creative, proactive, and willing to learn',
+                    'Good communication skills',
+                    'Fluent in English and Swahili',
+                    'Basic understanding of social media platforms'
                 ]
             }
         };

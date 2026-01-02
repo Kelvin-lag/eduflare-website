@@ -27,7 +27,6 @@
         /* Hero Section */
         .hero {
             height: 80vh;
-            background: url('../images/job-hero.png') no-repeat center center/cover;
             position: relative;
             color: var(--white);
             display: flex;
@@ -36,6 +35,20 @@
             text-align: center;
             padding: 0 1rem;
             margin-top: 70px;
+            background-color: var(--medium-gray);
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            z-index: 0;
+            pointer-events: none;
         }
 
         .hero::before {
@@ -149,6 +162,9 @@
             transform: translateY(30px);
             border: 1px solid rgba(0, 0, 0, 0.03);
             position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
         }
 
         .job-card:before {
@@ -184,6 +200,26 @@
             display: flex;
             align-items: center;
             border-bottom: 1px solid var(--medium-gray);
+        }
+
+        /* Two-column card layout */
+        .job-card-left,
+        .job-card-right {
+            padding: 1.8rem;
+        }
+
+        .job-card-left {
+            display: flex;
+            gap: 1.2rem;
+            align-items: center;
+            border-right: 1px solid rgba(0,0,0,0.04);
+        }
+
+        .job-card-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
         }
 
         .job-icon {
@@ -397,15 +433,32 @@
         }
 
         .modal-body ul {
-            margin-left: 1.5rem;
+            margin-left: 0;
             margin-bottom: 2rem;
+            padding-left: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            list-style: none;
         }
 
         .modal-body li {
-            margin-bottom: 0.8rem;
+            margin: 0;
             position: relative;
-            padding-left: 0.5rem;
+            padding: 0;
             line-height: 1.6;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            width: 100%;
+        }
+
+        .modal-body li i {
+            color: var(--primary-color);
+            min-width: 20px;
+            margin-top: 4px;
+            flex: 0 0 20px;
+            text-align: left;
         }
 
         .how-to-apply {
@@ -677,6 +730,10 @@
             }
 
             .jobs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .job-card {
                 grid-template-columns: 1fr;
             }
 
