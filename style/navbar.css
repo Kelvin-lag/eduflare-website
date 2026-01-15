@@ -1,0 +1,100 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 0 5px 30px rgb(0 22 84 / 10%);
+  position: fixed;
+  padding: 18px 0;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  font-family: 'Montserrat', 'Source Sans Pro', sans-serif;
+}
+
+nav .logo {
+  color: #00308F;
+  font-weight: 700;
+  font-size: 30px;
+  margin-left: 50px;
+  cursor: pointer;
+  font-family: 'Montserrat', 'Source Sans Pro', sans-serif;
+}
+
+.nav_links {
+  list-style: none;
+  display: flex;
+  margin-right: 50px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  margin-right: 15px;
+  font-size: 17px;
+  position: relative; /* Needed for underline effect */
+  font-family: 'Montserrat', 'Source Sans Pro', sans-serif;
+}
+
+/* Underline effect for nav links */
+nav a:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #00308F;
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: #00308F;
+}
+
+nav a:hover:after {
+  width: 100%;
+}
+
+.nav_links a:hover {
+  color: #00308F;
+}
+
+li {
+  display: inline-block;
+}
+
+.icon {
+  display: none;
+  margin-right: 50px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .nav_links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: white; /* Same color as the menu background */
+    position: absolute;
+    top: 60px; /* Adjust to fit below the navbar */
+    left: 0;
+    padding: 10px 0;
+  }
+
+  .nav_links li {
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .icon {
+    display: block;
+  }
+
+  nav .logo{
+    font-size: 20px;
+    margin-left: 30px;
+  }
+}

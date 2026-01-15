@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - EduFlare Tanzania</title>
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/job.css" />
+    <link rel="stylesheet" href="../style/navbar.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header id="header"></header>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <img src="../images/job-hero.png" alt="EduFlare team" class="hero-bg" />
+            <div class="hero-content">
+                <h1>Join Our Team at EduFlare</h1>
+                <p>Empowering education, transforming futures. Be part of our mission to make quality education accessible to all in Tanzania.</p>
+            </div>
+        </section>
+
+        <!-- Job Listings Section -->
+        <section class="jobs-section" id="careers">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Current Openings</h2>
+                    <p>Explore exciting career opportunities at EduFlare and help us shape the future of education in Tanzania.</p>
+                </div>
+                <div class="jobs-grid">
+                    <!-- Business Development & Digital Growth Officer (Graduate) -->
+                    <div class="job-card">
+                        <div class="job-card-left">
+                            <div class="job-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="job-title">
+                                <h3>Business Development & Digital Growth Officer (Graduate)</h3>
+                                <div class="job-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Tanzania</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="job-card-right">
+                            <p class="job-description">We are seeking a motivated graduate to support business development and digital growth activities across schools and student markets in Tanzania.</p>
+                            <button class="read-more-btn" data-job="business-digital-growth">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Join EduFlare Section -->
+        <section class="why-join-section" id="why-join">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Why Join EduFlare?</h2>
+                    <p>Discover the benefits of being part of our team and how we support your professional growth.</p>
+                </div>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>Career Growth</h3>
+                        <p>We provide continuous learning opportunities and clear career paths to help you advance professionally.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Collaborative Culture</h3>
+                        <p>Work with passionate educators and innovators in a supportive, team-oriented environment.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Meaningful Impact</h3>
+                        <p>Contribute to projects that transform education and make a real difference in students' lives.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h3>Work-Life Balance</h3>
+                        <p>We value your well-being with flexible work arrangements and comprehensive benefits.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>Competitive Compensation</h3>
+                        <p>Receive a salary and benefits package that recognizes your skills and contributions.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-globe-africa"></i>
+                        </div>
+                        <h3>Make a Difference</h3>
+                        <p>Be part of a mission-driven company that's shaping the future of education in Tanzania.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal for Job Details -->
+        <div class="modal" id="jobModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="modalJobTitle">Job Title</h2>
+                    <div class="job-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span id="modalJobLocation">Location</span>
+                    </div>
+                    <span class="close-modal" id="closeModal">&times;</span>
+                </div>
+                <div class="modal-body" id="modalJobBody">
+                    <!-- Job details will be inserted here dynamically -->
+                </div>
+                <div class="how-to-apply">
+                    <h3>How to Apply</h3>
+                    <p>To apply for this position, please send your resume and cover letter to:</p>
+                    <p class="email">info@eduflare.co.tz</p>
+                    <p>Please include the job title in the subject line of your email.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>About EduFlare</h3>
+                <p>Eduflare is dedicated to helping students achieve their dreams by studying abroad. Our services ensure a smooth transition to international education.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Kaliakoo, Dar es salaam, Tanzania</p>
+                <p><i class="fas fa-phone"></i> Whatsapp: +86 186 5507 0779</p>
+                <p><i class="fas fa-envelope"></i> info@eduflare.co.tz</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#careers">Careers</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <ul class="footer-social-icons">
+                        <li><a href="https://www.facebook.com/share/RWVf1GWrRc8ekivb/?mibextid=qi2Omg"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.tiktok.com/@eduflare?_r=1&_d=eadf25g472a3de&sec_uid=MS4wLjABAAAA5OwJtm1uA01WsQfjn7ROLG161_mTjSAFya43EnVXv9QafeO24MdQfzKNjE8KYaUy&share_author_id=6972383003109180417&sharer_language=en&source=h5_m&u_code=dj3g64hf1gda39&timestamp=1722533623&user_id=6972383003109180417&sec_user_id=MS4wLjABAAAA5OwJtm1uA01WsQfjn7ROLG161_mTjSAFya43EnVXv9QafeO24MdQfzKNjE8KYaUy&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7344373691000702722&share_link_id=3e7a113a-9881-4ba5-89a1-1ef81989e89d&share_app_id=1233&ugbiz_name=Account&ug_btm=b8727%2Cb4907&social_share_type=5"><i class="fab fa-tiktok"></i></a></li>
+                        <li><a href="https://www.instagram.com/eduflare_?igsh=eXJqbWRqZTQ0OGhu"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 EduFlare Tanzania. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Job details data (single vacancy)
+        const jobDetails = {
+            'business-digital-growth': {
+                title: 'Business Development & Digital Growth Officer (Graduate)',
+                location: 'Tanzania',
+                description: `
+                    <section>
+                        <h3 style="margin-bottom:0.5rem;color:#00308F;">About EduFlare</h3>
+                        <p>EduFlare supports students seeking international education by offering guidance on university selection, visa support, scholarships, travel assistance, and related services.</p>
+                        <h3 style="margin-top:1rem;margin-bottom:0.5rem;color:#00308F;">Role Overview</h3>
+                        <p>This graduate role supports business development and digital growth across schools and student markets in Tanzania, working closely with sales and marketing teams.</p>
+                    </section>
+                `,
+                responsibilities: [
+                    'Identify and support expansion into new schools, regions, and student markets',
+                    'Build and manage partnerships with schools, institutions, and education stakeholders',
+                    'Support social media growth and student engagement (WhatsApp, Instagram, Facebook, TikTok)',
+                    'Generate student leads through digital campaigns, school visits, and events',
+                    'Support the sales team with leads, programs, and outreach activities',
+                    'Track activities and prepare simple weekly and monthly reports'
+                ],
+                requirements: [
+                    'Fresh graduate in Business, Marketing, Education, or related field',
+                    'Creative, proactive, and willing to learn',
+                    'Good communication skills',
+                    'Fluent in English and Swahili',
+                    'Basic understanding of social media platforms'
+                ]
+            }
+        };
+
+        // DOM elements
+        const readMoreBtns = document.querySelectorAll('.read-more-btn');
+        const jobModal = document.getElementById('jobModal');
+        const closeModal = document.getElementById('closeModal');
+        const modalJobTitle = document.getElementById('modalJobTitle');
+        const modalJobLocation = document.getElementById('modalJobLocation');
+        const modalJobBody = document.getElementById('modalJobBody');
+
+        // Read more buttons
+        readMoreBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const jobType = btn.getAttribute('data-job');
+                showJobDetails(jobType);
+            });
+        });
+
+        // Show job details in modal
+        function showJobDetails(jobType) {
+            const job = jobDetails[jobType];
+            modalJobTitle.textContent = job.title;
+            modalJobLocation.textContent = job.location;
+
+            let modalContent = `
+                <div style="margin-bottom:1.5rem;">${job.description}</div>
+                <div style="margin-bottom:2rem;">
+                    <h3 style="color:#00308F;">Key Responsibilities</h3>
+                    <ul style="margin-bottom:1.5rem;">
+            `;
+            job.responsibilities.forEach(responsibility => {
+                modalContent += `<li style="margin-bottom:0.7rem;"><i class="fas fa-check-circle" style="color:#00308F;margin-right:8px;"></i>${responsibility}</li>`;
+            });
+            modalContent += `
+                    </ul>
+                    <h3 style="color:#00308F;">Requirements</h3>
+                    <ul style="margin-bottom:1.5rem;">
+            `;
+            job.requirements.forEach(requirement => {
+                modalContent += `<li style="margin-bottom:0.7rem;"><i class="fas fa-check-circle" style="color:#00308F;margin-right:8px;"></i>${requirement}</li>`;
+            });
+            modalContent += `</ul>`;
+
+            if (job.offer && job.offer.length > 0) {
+                modalContent += `
+                    <h3 style="color:#00308F;">What We Offer</h3>
+                    <ul>
+                `;
+                job.offer.forEach(offerItem => {
+                    modalContent += `<li style="margin-bottom:0.7rem;"><i class="fas fa-check-circle" style="color:#00308F;margin-right:8px;"></i>${offerItem}</li>`;
+                });
+                modalContent += `</ul>`;
+            }
+
+            modalJobBody.innerHTML = modalContent;
+
+            jobModal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close modal
+        closeModal.addEventListener('click', () => {
+            jobModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', (event) => {
+            if (event.target === jobModal) {
+                jobModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Animate job cards on scroll
+        function animateOnScroll() {
+            const jobCards = document.querySelectorAll('.job-card');
+            
+            jobCards.forEach(card => {
+                const cardTop = card.getBoundingClientRect().top;
+                const cardBottom = card.getBoundingClientRect().bottom;
+                
+                if (cardTop < window.innerHeight && cardBottom > 0) {
+                    card.classList.add('animate');
+                }
+            });
+        }
+
+        // Initial check and add scroll event listener
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+    <script src="../js/navbar.js"></script>
+</body>
+</html>
